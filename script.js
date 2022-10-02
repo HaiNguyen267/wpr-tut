@@ -3,12 +3,8 @@ const statusBar = document.querySelector('#status-bar');
 const btnPrev = statusBar.querySelector('#prev');
 const btnNext = statusBar.querySelector('#next');
 
-const box = document.querySelector(".flashcard-box")
 const flashcardContainer = document.querySelector("#flashcard-container");
-const word = document.querySelector(".word")
-const definition = document.querySelector(".definition")
 
-box.addEventListener("click", flipCard)
 
 
 // Task 1: flip word/ definition
@@ -45,9 +41,12 @@ function populateCards(cardContainer) {
         createCard(word, definition)
     
     }
+    console.log(cardContainer);
 }
 
 const cards = populateCards(cardContainer);
+cardArr[0].classList.remove("hidden")
+
 
 const statusNoWords = statusBar.querySelector('span');
 
